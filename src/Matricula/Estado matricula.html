@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estado Matricula</title>
+        <link rel="stylesheet" href="../../CSS/Inscripcion/Style-inscripcion.css" />
+        <link rel="stylesheet" href="../../CSS/Inscripcion/Navegacion-inscripcion.css" />
+    </head>
+    <body>
+        
+    <header>
+        <nav>
+            <div class="logo">
+            <img src="../catalogo-sura-main/recursos/sura-logo-white.png" alt="Logo SURA">
+            </div>
+
+            <div class="nav-links">
+            <a href="../catalogo-sura-main/catalogo.html">Inicio</a>
+            <a href="../Registro/login.html">Iniciar sesion</a>
+            <a href="./Matricula.html">Inscripciones</a>
+            <a href="../catalogo-sura-main/catalogo.html">Catálogo</a>
+            <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
+            <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
+            <a class="nav-link active" aria-current="page" href="resume.html">HOJA DE VIDA</a>
+            </div>
+
+            <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <i>🔍</i>
+            </div>
+        </nav>
+    </header> 
+
+
+
+               <section>
+
+                <h2>Informacion General de los cursos</h2> 
+
+             <h3> Maxim de alumnos permitidos por curso:  20 </h3>
+
+               </section>
+       
+      
+
+
+               <div class="vertical_position_section">
+
+
+
+              
+
+            <table border="1" class="tabla_cursos">
+
+                    <thead>
+                    
+                    
+
+                    
+
+                    </thead>
+
+                    <tbody id="tabla_cursos">
+
+
+                        <tr>
+                            <th>Curso</th>
+                            <th>Fecha de Inscripción</th>
+                            <td>Fecha fin</td>
+                            <th>Estado</th>
+                            <th>Colaborador</th>
+                            <th>CUPOS / #. Alum_Matriculados</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>Anatomía</td>
+                            <td>2025-10-12</td>
+                            <td>2026-01-31</td>
+                            <td>Aprobado</td>
+                            <td>Carlos pinto</td>
+                            <td>Cupos: 8 - Alumnos: 11</td>
+                        </tr>
+
+                        
+
+                        <tr>
+                            <td>Etica</td>
+                            <td>2025-09-18</td>
+                            <td>2025-12-15</td>
+                            <td>Aprobado</td>
+                            <td> Beatriz Cortez</td>
+                             <td>Cupo: 5 - Alumnos: 15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Electronico</td>
+                            <td>2025-10-10</td>
+                            <td> -- </td>
+                            <td>Pendiente</td>
+                            <td>Abigail Trejos</td>
+                             <td>Cupo: 14 - Alumnos: 6</td>
+                        </tr>
+
+                        
+                    </tbody>
+            </table>
+
+        </div>
+    
+
+              <script>
+                const matriculas = [];
+
+
+                function mostrarSeccion(id){
+                document.getElementById('formulario').style.display = 'none';
+                document.getElementById('matricula').style.display = 'none';
+                document.getElementById(id).style.display = 'block';
+                }
+
+
+                document.getElementById('formInscripcion').addEventListener('submit', function(e){
+                e.preventDefault();
+                const curso = document.getElementById('curso').value;
+
+
+                if(curso === 'Farmacología'){
+                document.getElementById('resultado').innerHTML = '<p>El curso seleccionado está lleno. Por favor elija otro.</p>';
+                return;
+                }
+
+
+                const fecha = new Date().toLocaleDateString();
+                const estado = 'pendiente';
+
+
+                matriculas.push({curso, fecha, estado});
+                mostrarMatriculas();
+                document.getElementById('resultado').innerHTML = `<p>Inscripción enviada para ${curso}. Estado inicial: <strong>${estado}</strong></p>`;
+                document.getElementById('formInscripcion').reset();
+                });
+
+
+                function mostrarMatriculas(){
+                const tabla = document.getElementById('tablaMatriculas');
+                tabla.innerHTML = '';
+                matriculas.forEach((m, index) => {
+                const fila = `<tr>
+                <td>${m.curso}</td>
+                <td>${m.fecha}</td>
+                <td id='estado-${index}'>${m.estado}</td>
+                <td><button onclick='cambiarEstado(${index})'>Cambiar Estado</button></td>
+                </tr>`;
+                tabla.innerHTML += fila;
+                });
+                }
+
+
+                function cambiarEstado(index){
+                const estados = ['pendiente', 'en proceso', 'aprobado', 'rechazado'];
+                const actual = matriculas[index].estado;
+                const siguiente = estados[(estados.indexOf(actual) + 1) % estados.length];
+                matriculas[index].estado = siguiente;
+                document.getElementById(`estado-${index}`).innerText = siguiente;
+                }
+            </script>
+
+<footer>
+    <p>© 2025 Campus Corporativo TID  Grupo 2: Gestion de inscripciones</p>
+  </footer>
+          
+    
+    </body>
+</html>

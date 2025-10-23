@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Cursos - Campus TID</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../CSS/Catalogo/style-catalogo.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+    <div class="logo">
+      <img src="recursos/sura-logo-white.png" alt="Logo SURA">
+    </div>
+
+    <div class="nav-links">
+      <a href="catalogo.html">Inicio</a>
+        <a href="../Registro/login.html">Iniciar sesion</a>
+        <a href="../Matricula/Matricula.html">Inscripciones</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
+        <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <i>🔍</i>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+    <!-- Navegación entre categorías con bootstrap, responsivo -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="catalogo.html">
+          <img src="recursos/Logo-Sura-Main.png" alt="Logo Campus TID" height="30px">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mi-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mi-menu">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Todos los Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tecnologia.html">Tecnologia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gestion.html">Gestion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="innovacion.html">Innovación</a>
+            </li>
+          </ul>
+          
+        </div>
+        
+      </div>
+
+    </nav>
+
+    <!-- Catálogo general -->
+    <section class="cursos">
+      <h2>Gestion Empresarial</h2>
+
+      <div class="contenedor-cursos">
+
+        <a href="cursos/gestion-empresarial.html" class="tarjeta">
+          <h3>📊 Gestión Empresarial</h3>
+          <p><strong>Categoría:</strong> Gestión</p>
+          <p>Desarrolla habilidades de liderazgo y gestión de equipos de trabajo.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xtc6cqg49EA?si=iZWi8_qL4jUFNwrL" title="Gestión Empresarial" frameborder="0" allowfullscreen></iframe>
+        </a>
+
+        <a href="cursos/liderazgo.html" class="tarjeta">
+          <h3>🤝 Liderazgo y trabajo en equipo</h3>
+          <p><strong>Categoría:</strong>Gestion</p>
+          <p>Aprende a coordinar equipos de alto rendimiento y mejorar las dinámicas laborales dentro de tu organización.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2MocfNK-Fg0?si=RCElZRnn6UoCyWGf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </a>
+
+        <a href="cursos/gestion-financiera.html" class="tarjeta">
+          <h3>📈 Gestion financiera</h3>
+          <p><strong>Categoría:</strong>Gestion</p>
+          <p>Domina conceptos clave de contabilidad, presupuestos y toma de decisiones económicas estratégicas.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fUYDODrjj28?si=g38Fek1FiQLMk-GC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </a>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Campus Corporativo TID  Grupo 3: Catálogo de Cursos</p>
+  </footer>
+
+</body>
+</html>

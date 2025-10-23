@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../../CSS/Cominucaciones/style-Comunicaciones.css">
+        </head>
+        <body>
+            <section>
+            <div class="header">
+                <h2 class=" h1">Calificacion del colaborador</h2> 
+            </div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Colaborador</th>
+                            <th>Curso</th>
+                            <th>Nota</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mario</td>
+                            <td>Sistemas</td>
+                            <td>4.3</td>
+                            <td>Aprobado</td>
+                        </tr>
+                        <tr>
+                            <td>Sandra</td>
+                            <td>RH</td>
+                            <td>3.2</td>
+                            <td>Requiere revisión</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+            <div class="header">
+                <h2 class=" h1">Calificacion del curso</h2> 
+            </div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>comentario</th>
+                            <th>calificacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sistemas</td>
+                            <td><input type="text" id="comentarios" name="usuario" required placeholder="escriba su comentario"></td>                 
+                            <td><input type="number" id="calificacion" min="1" max="5" placeholder="escriba la nota (1/5)" style="width:150px"></td>
+                        </tr>
+                        <tr>
+                            <td>RH</td>
+                            <td><input type="text" id="comentarios" name="usuario" required placeholder="escriba su comentario"></td>
+                            <td><input type="number" id="calificacion" min="1" max="5" placeholder="escriba la nota (1/5)" style="width:150px"></td>
+                        </tr>
+                    </tbody>    
+                </table>
+                <div class="form-group div_position">
+                    <input type="submit" value="Publicar">
+                    <input type="reset" value="Limpiar">
+                    </div>
+            </section>
+            
+            <a class="a" href="../Comunicaciones/COMUNICACIONES_INT.html">Volver al inicio</a>
+        </body>
+    </html>
