@@ -4,25 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estado Matricula</title>
-        <link rel="stylesheet" href="../../CSS/Inscripcion/Style-inscripcion.css" />
-        <link rel="stylesheet" href="../../CSS/Inscripcion/Navegacion-inscripcion.css" />
+        <link rel="stylesheet" href="../../CSS/css.css" />
+
     </head>
-    <body>
+    <body class="bodyMatricula">
         
-    <header>
-        <nav>
+    <header class="headerMatricula">
+        <nav class="navbarMatricula">
             <div class="logo">
-            <img src="../catalogo-sura-main/recursos/sura-logo-white.png" alt="Logo SURA">
+            <img src="../../img/recursos/sura-logo-white.png" alt="Logo SURA">
             </div>
 
-            <div class="nav-links">
-            <a href="../catalogo-sura-main/catalogo.html">Inicio</a>
-            <a href="../Registro/login.html">Iniciar sesion</a>
-            <a href="./Matricula.html">Inscripciones</a>
-            <a href="../catalogo-sura-main/catalogo.html">Catálogo</a>
-            <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
-            <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
-            <a class="nav-link active" aria-current="page" href="resume.html">HOJA DE VIDA</a>
+            <div class="div-links">
+                <a href="../../Index.html">Inicio</a>
+              <a href="../Registro/login.html">Iniciar sesion</a>
+              <a href="../Matricula/Matricula.html">Inscripciones</a>
+              <a href="../../Index.html">Catálogo</a>
+              <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
+              <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
+            
             </div>
 
             <div class="search-bar">
@@ -36,9 +36,9 @@
 
                <section>
 
-                <h2>Informacion General de los cursos</h2> 
+                <h2 class="h2matrucula">Informacion General de los cursos</h2> 
 
-             <h3> Maxim de alumnos permitidos por curso:  20 </h3>
+             <h3 class="h3matrucula"> Maxim de alumnos permitidos por curso:  20 </h3>
 
                </section>
        
@@ -108,6 +108,10 @@
             </table>
 
         </div>
+
+        <button class="botonMatricula" onclick="window.location.href='Matricula.html'">
+            Agregar Curso
+        </button>
     
 
               <script>
@@ -167,7 +171,7 @@
                 }
             </script>
 
-<footer>
+<footer class="footerMatricula">
     <p>© 2025 Campus Corporativo TID  Grupo 2: Gestion de inscripciones</p>
   </footer>
           
